@@ -3,6 +3,7 @@ from PIL import ImageFont
 from PIL import ImageDraw 
 from random import randrange as rand
 from math import sqrt, ceil
+import sys
 
 font_color = (255, 255, 255) # Customize your font color here
 background_color = (0, 0, 0) # Customize your background color here
