@@ -6,6 +6,9 @@ from math import sqrt, ceil
 import sys
 import os
 
+font_color = (255, 255, 255) # Customize your font color here
+background_color = (0, 0, 0) # Customize your background color here
+
 def banner():
 	print("======================================================")
 	print("| Image to binary style converter made by 0xdeadbeef |")
@@ -46,7 +49,7 @@ def main():
 			w = ceil(font_size*0.875)
 			h = ceil(font_size*0.825)
 
-			img = Image.new("RGB", [width,height], (0,0,0))
+			img = Image.new("RGB", [width,height], background_color)
 
 			draw = ImageDraw.Draw(img)
 			font = ImageFont.truetype("consola.ttf", font_size)
@@ -63,7 +66,7 @@ def main():
 					blue = pixel_array[i][j][2]
 
 					if brightness(red,green,blue) > 127:
-						draw.text((j, i),binary[rand(2)],(255,255,255),font=font)
+						draw.text((j, i),binary[rand(2)],font_color,font=font)
 
 					j += w
 
