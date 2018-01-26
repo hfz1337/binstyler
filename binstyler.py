@@ -5,8 +5,9 @@ from random import randrange as rand
 from math import sqrt, ceil
 import sys
 
-font_color = (255, 255, 255) # Customize your font color here
+font_color = (0, 255, 0) # Customize your font color here
 background_color = (0, 0, 0) # Customize your background color here
+chars = ["0", "1"] # Customize your characters here
 
 def banner():
 	print("======================================================")
@@ -53,8 +54,6 @@ def main():
 			draw = ImageDraw.Draw(img)
 			font = ImageFont.truetype("consola.ttf", font_size)
 
-			binary = ["0","1"]
-
 			i,j = 0,0
 
 			while i < height:
@@ -65,7 +64,7 @@ def main():
 					blue = pixel_array[i][j][2]
 
 					if brightness(red,green,blue) > 127:
-						draw.text((j, i),binary[rand(2)],font_color,font=font)
+						draw.text((j, i),chars[rand(len(chars))],font_color,font=font)
 
 					j += w
 
