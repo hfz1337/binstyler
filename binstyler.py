@@ -11,7 +11,7 @@ chars = ["0", "1"] # Customize your characters here
 
 def banner():
 	print("======================================================")
-	print("| Image to binary style converter made by 0xdeadbeef |")
+	print("| Image to binary style converter made by 0x000c0ded |")
 	print("| Contact: gh_zouahi@esi.dz                          |")
 	print("======================================================")
 
